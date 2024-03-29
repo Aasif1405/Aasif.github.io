@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./content/app.css">
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom CSS styles for Statistics page */
+        #content {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        #chartContainer {
+            height: 300px;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <!-- Brand Logo and Navigation Links -->
+        <a class="navbar-brand" href="index.html"><i class="fa-brands fa-hubspot"></i> Harmony Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"> <i class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html"> <i class="fa-solid fa-user-tie"></i> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html"> <i class="fa-solid fa-taxi"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html"> <i class="fa-brands fa-teamspeak"></i> Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html"> <i class="fa-solid fa-blog"></i> Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="event_planning.html"> <i class="fa-solid fa-calendar-alt"></i> Event Planning</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="statistics.html"> <i class="fa-solid fa-chart-bar"></i> Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main content section for Statistics -->
+<main class="container" id="content">
+    <!-- Content will be dynamically loaded here -->
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <h1 class="text-center mb-5">Statistics Page</h1>
+            <!-- Add your statistical data visualization here -->
+            <canvas id="statisticsChart"></canvas>
+        </div>
+    </div>
+</main>
+
+<!-- Footer section -->
+<footer class="bg-dark text-white text-center py-4">
+    <!-- Your footer content -->
+    <p>&copy; 2024 Harmony Hub</p>
+</footer>
+
+<!-- External JavaScript files -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script/router.js"></script>
+<script>
+    // Define the routes for the router
+    const routes = [
+        { path: '/', template: 'index.html' },
+        { path: '/portfolio', template: 'portfolio.html' },
+        { path: '/services', template: 'services.html' },
+        { path: '/team', template: 'team.html' },
+        { path: '/blog', template: 'blog.html' },
+        { path: '/event_planning', template: 'event_planning.html' },
+        // Add the route for the Statistics page
+        { path: '/statistics', template: 'statistics.html' }
+        // Add more routes as needed
+    ];
+
+    // Router class to manage application routes and control page content without reloading
+    class Router {
+        constructor(routes) {
+            this.routes = routes;
+            this.currentRoute = null;
+        }
+
+        // Initialize the router
+        init() {
+            window.addEventListener('DOMContentLoaded', () => this.route());
+            window.addEventListener('popstate', () => this.route());
+        }
+
+        // Navigate to a specified route
+        navigate(route) {
+            history.pushState({}, '', route);
+            this.route();
+        }
+
+        // Route to the appropriate page based on the URL
+        route() {
+            const path = window.location.pathname;
+            const route = this.routes.find(r => r.path === path);
+
+            if (route) {
+                this.currentRoute = route;
+                this.render(route.template);
+            } else {
+                // Handle 404 or default route
+                this.render('404.html');
+            }
+        }
+
+        // Render the template of the current route
+        render(template) {
+            // Fetch the template content using AJAX
+            $.ajax({
+                url: template,
+                method: 'GET',
+                success: (content) => {
+                    $('#content').html(content); // Replace content directly
+                    if (template === 'statistics.html') {
+                        drawChart();
+                    }
+                },
+                error: (xhr, status, error) => {
+                    console.error('Error fetching template:', error);
+                }
+            });
+        }
+    }
+
+    // Create a new Router instance with the defined routes
+    const router = new Router(routes);
+
+    // Initialize the router
+    router.init();
+
+    // Function to draw the chart
+    function drawChart() {
+        // Sample data for demonstration
+        const data = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: 'Sales',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                data: [200, 300, 400, 500, 600, 700, 800]
+            }]
+        };
+
+        // Chart configuration
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Render the chart
+        const ctx = document.getElementById('statisticsChart').getContext('2d');
+        new Chart(ctx, config);
+    }
+</script>
+</body>
+</html>
