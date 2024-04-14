@@ -1,0 +1,19 @@
+{
+  "projects" : [
+    {
+      "title": "GM",
+      "description": "Project GM is a community-driven project focused on bridging the digital divide and promoting tech literacy for all ages. We believe that everyone should have the opportunity to navigate the digital world confidently. Join us in organizing workshops, mentorship programs, and community events to empower individuals with essential digital skills. Together, we can create a harmonious and inclusive community where everyone can thrive in today's interconnected society.",
+      "image": "../content/pics/project1.jpg"
+    },
+    {
+      "title": "MT",
+      "description": "Join us in creating a vibrant and sustainable community through our MT initiative. We aim to transform unused urban spaces into flourishing gardens where residents can come together to grow fresh produce, exchange gardening tips, and foster a sense of community. Whether you're a seasoned gardener or a complete novice, everyone is welcome to participate. Let's cultivate not just plants but lasting connections within our neighborhood!",
+      "image": "../content/pics/project2.jpg"
+    },
+    {
+      "title": "SW",
+      "description": "Our community is launching SW cleanup initiative to enhance the beauty and sustainability of our neighborhood. We aim to organize regular cleanup events where community members come together to pick up litter, plant trees, and beautify public spaces. By fostering a sense of environmental responsibility, we hope to create a cleaner and more enjoyable living environment for everyone. Join us in making a positive impact on our community and contributing to a greener, healthier future!",
+      "image": "../content/pics/project3.jpg"
+    }
+  ]
+}

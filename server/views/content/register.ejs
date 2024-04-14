@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-sm-12">
+            <div class="register" id="contentArea">
+                <br>
+                <h2 class="mt-5 mb-3 text-muted text-center">Register Here</h2>
+
+                <% if(messages.length > 0){ %>
+                    <div id = "messageArea" class="alert alert-danger">
+                        <%= messages %>
+
+                    </div>
+
+                <% } %>
+
+                <form id="registerForm" novalidate>
+
+
+                    <div class="form-group mb-2">
+                        <div class="input-group">
+                            <label for="fName" class="input-group-text">First Name:</label>
+                            <input type="text" class="form-control" id="fName" name="fname" required
+                                   value="" placeholder="Enter your First Name">
+
+                            <label for="lName" class="input-group-text">Last Name:</label>
+                            <input type="text" class="form-control" id="lName" name="lName" required
+                                   value="" placeholder="Enter your Last Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <div class="input-group">
+                            <label for="username" class="input-group-text">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required
+                                   value="" placeholder="Enter your Username">
+                            <label for="emailAddress" class="input-group-text">Email Address:</label>
+                            <input type="text" class="form-control" id="emailAddress" name="emailAddress" required
+                                   value="" placeholder="Enter your Email Address">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <div class="input-group">
+                            <label for="address" class="input-group-text">Address:</label>
+                            <input type="text" class="form-control" id="address" name="address" required
+                                   value="" placeholder="Enter your Address">
+                            <label for="contactNumber" class="input-group-text">Phone Number:</label>
+                            <input type="text" class="form-control" id="contactNumber" name="contactNumber" required
+                                   value="" placeholder="Enter your Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <div class="input-group">
+                            <label for="password" class="input-group-text">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required
+                                   value="" placeholder="Enter your Password">
+
+                            <label for="confirmPassword" class="input-group-text">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required
+                                   value="" placeholder="Enter your Confirm Password">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="text-end">
+                        <button id="loginButton" type="button" class="btn btn-primary btn-lg"><i class="fas fa-sign-in-alt"> Register</i></button>
+                        <!-- Scripting Section <div class="text-right">-->
+                        <button id="cancelButton" type="button" class="btn btn-warning btn-lg"><i class="fas fa-undo"> Cancel</i></button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+        <br>
+        <p class="text-center text-muted small">
+            Already have an account?
+            <a href="./login" style="color: #000; text-decoration: underline;">Sign in</a>
+        </p>
+    </div>
+</div>

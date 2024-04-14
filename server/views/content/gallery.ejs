@@ -1,0 +1,51 @@
+<main class="container">
+    <br>
+    <h2>Our Past Events Gallery</h2>
+    <br>
+    <div class="row">
+        <div class="column">
+            <img src="../../../client/assests/pics/gallery1.jpg" onclick="modalOpen();currentPic(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="../../../client/assests/pics/gallery2.jpg" onclick="modalOpen();currentPic(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="../../../client/assests/pics/gallery3.jpg" onclick="modalOpen();currentPic(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="../../../client/assests/pics/gallery4.jpg" onclick="modalOpen();currentPic(4)" class="hover-shadow">
+        </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close cursor" onclick="modalClose()">&times;</span>
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="../../../client/assests/pics/gallery1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="../../../client/assests/pics/gallery2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="../../../client/assests/pics/gallery3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="../../../client/assests/pics/gallery4.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusPic(-1)">&#10094;</a>
+            <a class="next" onclick="plusPic(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+</main>

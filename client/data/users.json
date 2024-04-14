@@ -1,0 +1,25 @@
+{
+  "users" : [
+
+    {
+      "DisplayName" : "Admin",
+      "EmailAddress" : "admin@durhamcollege.com",
+      "Username" : "admin",
+      "Password" : "password"
+    },
+
+    {
+      "DisplayName" : "Mark Stevens",
+      "EmailAddress" : "mark.stevens@dcmail.com",
+      "Username" : "mark.stevens94",
+      "Password" : "password1"
+    },
+
+    {
+      "DisplayName" : "Sara Laurel",
+      "EmailAddress" : "sara.laurel@dcmail.com",
+      "Username" : "sara.laurel96",
+      "Password" : "password2"
+    }
+  ]
+}

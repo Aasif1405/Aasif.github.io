@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tags -->
+    <meta name="author: Thipiga Rajasekar, Mohammed Aasif" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title -->
+    <title><%= title%></title>
+
+    <!-- CSS Section -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../client/content/app.css">
+
+    <!-- JavaScript Imports -->
+    <!-- Namespace script -->
+    <script src="../../client/scripts/namespace.js"></script>
+    <!-- Router script -->
+    <script src="../../client/scripts/router.js"></script>
+    <!-- Contact script -->
+    <script src="../../client/scripts/contact.js"></script>
+    <!-- User script -->
+    <script src="../../client/scripts/user.js"></script>
+
+</head>
+<body id="<%= page%>>"> <!-- Page identifier -->
+
+<!-- Header section -->
+<header>
+    <%- include('./components/header')%> <!-- Include header component -->
+</header>
+
+<!-- Main content section -->
+<main class="container">
+    <%- include('./content/' + page)%> <!-- Include content based on page -->
+</main>
+
+<!-- Footer section -->
+<footer>
+    <%- include('./components/footer')%> <!-- Include footer component -->
+</footer>
+
+<!-- Scripting Section -->
+<!-- jQuery -->
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Custom application JavaScript -->
+<script src="../../client/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "name": "Education Classes",
+      "description": "The Harmony Hub provides a variety of educational classes catering to different age groups and interests. These classes include technology workshops, skill development courses, language classes, or any other educational programs that empower individuals and contribute to their personal growth."
+    },
+    {
+      "name": "Community Events and Workshop",
+      "description": "Organizing regular community events and workshops can bring people together and foster a sense of belonging. These events may many different kinds of community-building activities. By offering diverse events, the Harmony Hub can cater to a broad audience and encourage social interaction."
+    },
+    {
+      "name": "Online Interactive Portal",
+      "description": "The Harmony Hub offers an interactive online platform. This platform includes a community forum, a space for online classes or webinars, and a portal for accessing resources and information about ongoing community projects. The online interaction platform enhances accessibility and allows community members to stay connected even when physically distant."
+    }
+  ]
+}

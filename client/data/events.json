@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "title": "Tech Meetup: Future of Tech",
+      "date": "2024-04-20",
+      "location": "Tech Hub",
+      "description": "Explore the latest trends and innovations in the tech industry at our monthly tech meetup. This month's theme: Future of Tech."
+    },
+    {
+      "title": "Tech Talk Series: Artificial Intelligence",
+      "date": "2024-04-28",
+      "location": "Innovation Center",
+      "description": "Dive deep into the world of Artificial Intelligence with our expert speakers. Learn about AI applications, ethics, and future prospects."
+    },
+    {
+      "title": "Startup Pitch Night",
+      "date": "2024-05-05",
+      "location": "Startup Incubator",
+      "description": "Witness innovative ideas come to life at our startup pitch night. Entrepreneurs will showcase their startups and compete for funding."
+    },
+    {
+      "title": "Blockchain Technology Symposium",
+      "date": "2024-05-12",
+      "location": "Tech Institute",
+      "description": "Join industry leaders and experts to explore the transformative potential of blockchain technology. Learn about its applications, challenges, and future developments."
+    },
+    {
+      "title": "Cybersecurity Conference",
+      "date": "2024-05-20",
+      "location": "Cybersecurity Center",
+      "description": "Enhance your understanding of cybersecurity threats and solutions at our annual cybersecurity conference. Engage with leading cybersecurity professionals and experts."
+    }
+  ]
+}

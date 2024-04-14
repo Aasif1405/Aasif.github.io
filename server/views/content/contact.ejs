@@ -1,0 +1,69 @@
+<div class="container">
+    <br>
+    <h2><i class="fa-solid fa-phone"></i> Contact Us</h2>
+    <p>To contact us, please submit the form below or reach us at any of the other methods provided below.</p>
+    <div class="rpw justify-content-lg-center g-3"></div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" class="col-lg-6 col-md-4 col-sm-4">
+        <!-- Full Name Input -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Full Name</span>
+            <input id="fullName" name="fullName" type="text" class="form-control"
+                   aria-describedby="Full Name" aria-label="Full Name Input" required>
+        </div>
+
+        <!-- Email Address Input -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email Address</span>
+            <input id="emailAddress" name="emailAddress" type="email" class="form-control"
+                   aria-describedby="Email Address" aria-label="Email Address Input" required>
+        </div>
+
+        <!-- Subject Area Input -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Subject</span>
+            <textarea id="message" name="message" class="form-control"
+                      aria-describedby="Subject Area" aria-label="Subject Area Input" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="sendButton" type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Submit</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" style="display:none;">
+        <h1>Thank You for Submitting the form. A team member will assist you as soon as possible!</h1>
+        <p>Redirecting in <span id="countdown">5</span> seconds...</p>
+    </div>
+
+    <!-- Contact Information -->
+    <br>
+    <h5>Phone Number: (416) 123-4567</h5>
+    <h5>Fax Number: (647) 123-4567</h5>
+    <h5>Email Address: harmony.hub@dcmail.ca</h5>
+    <h5>Address: 2000 Simcoe Street North, Oshawa, ON L1G 0C5</h5>
+    <br>
+    <h2><i class="fa-solid fa-comment"></i> User Feedback</h2>
+    <p>To rate your experience or leave comments, please submit the form below</p>
+    <form id="feedbackForm" class="col-lg-6 col-md-4 col-sm-4">
+        <!-- Full Name Input -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Full Name</span>
+            <input id="feedbackfullName" name="feedbackfullName" type="text" class="form-control"
+                   aria-describedby="Full Name" aria-label="Full Name Input" required>
+        </div>
+
+        <!-- Subject Area Input -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Subject</span>
+            <textarea id="feedback" name="feedback" class="form-control"
+                      aria-describedby="Subject Area" aria-label="Subject Area Input" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="feedbackButton" type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Submit</button>
+    </form>
+</div>
